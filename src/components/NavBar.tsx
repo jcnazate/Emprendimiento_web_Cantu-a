@@ -11,7 +11,8 @@ const NavBar: React.FC = () => {
     { label: 'Qué Vendemos', path: '/products' },
     { label: 'Ubicación', path: '/location' },
     { label: 'Contacto', path: '/contact' },
-    { label: 'Licencias', path: '/licenses' }
+    { label: 'Licencias', path: '/licenses' },
+    { label: 'Modelo de Negocio', path: '/business-model' }
   ];
 
   const isActive = (path: string) => {
@@ -39,11 +40,10 @@ const NavBar: React.FC = () => {
                 <Link
                   key={item.path}
                   to={item.path}
-                  className={`px-3 py-2 rounded-md text-sm font-gaming font-medium transition-colors ${
-                    isActive(item.path)
+                  className={`px-3 py-2 rounded-md text-sm font-gaming font-medium transition-colors ${isActive(item.path)
                       ? 'text-gold bg-white/10'
                       : 'text-white hover:text-gold'
-                  }`}
+                    }`}
                 >
                   {item.label}
                 </Link>
@@ -93,11 +93,10 @@ const NavBar: React.FC = () => {
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsMenuOpen(false)}
-                className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${
-                  isActive(item.path)
+                className={`block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors ${isActive(item.path)
                     ? 'text-gold bg-white/10'
                     : 'text-white hover:text-gold'
-                }`}
+                  }`}
               >
                 {item.label}
               </Link>

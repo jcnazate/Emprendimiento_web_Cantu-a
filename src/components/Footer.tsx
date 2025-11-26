@@ -35,13 +35,13 @@ const Footer: React.FC = () => {
               </h3>
             </div>
             <p className="text-white mb-6 leading-relaxed">
-              Game Studio dedicado a crear experiencias gaming épicas que 
-              desafían los límites de la imaginación y conectan jugadores 
+              Game Studio dedicado a crear experiencias gaming épicas que
+              desafían los límites de la imaginación y conectan jugadores
               de todo el mundo.
             </p>
             <div className="flex items-center space-x-2 text-sm text-white">
               <span><i className="fas fa-trophy"></i></span>
-              <span>Estudio del Año 2024</span>
+              <span>Estudio del Año 2025</span>
             </div>
           </div>
 
@@ -153,7 +153,7 @@ const Footer: React.FC = () => {
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-white">
             <div className="mb-2 md:mb-0">
               <p>
-                © 2024 Puente del Diablo Game Studio. Todos los derechos reservados.
+                © 2025 Puente del Diablo Game Studio. Todos los derechos reservados.
               </p>
             </div>
             <div className="flex items-center space-x-4">
@@ -162,10 +162,10 @@ const Footer: React.FC = () => {
               <span>Powered by Unity & Unreal</span>
             </div>
           </div>
-          
+
           <div className="mt-4 text-xs text-white/50">
             <p>
-              Este sitio web utiliza cookies para mejorar tu experiencia. 
+              Este sitio web utiliza cookies para mejorar tu experiencia.
               Al continuar navegando, aceptas nuestras políticas de privacidad.
             </p>
           </div>

@@ -8,6 +8,7 @@ import LocationPage from './pages/LocationPage';
 import ContactPage from './pages/ContactPage';
 import LicensesPage from './pages/LicensesPage';
 import TestPage from './pages/TestPage';
+import BusinessModelPage from './pages/BusinessModelPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/licenses" element={<LicensesPage />} />
             <Route path="/test" element={<TestPage />} />
+            <Route path="/business-model" element={<BusinessModelPage />} />
           </Routes>
         </main>
         <Footer />
