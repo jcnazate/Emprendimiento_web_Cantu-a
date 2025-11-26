@@ -9,16 +9,24 @@ import {
   MessageCircle,
   Banknote,
   Tag,
-  Flame
+  Flame,
+  LucideIcon
 } from 'lucide-react';
 import cantunaBg from '../img/Cantuña.jpg';
 
+interface Section {
+  id: string;
+  title: string;
+  icon: LucideIcon;
+  content: string[];
+}
+
 const BusinessModelPage: React.FC = () => {
-  const sections = [
+  const sections: Section[] = [
     {
       id: 'partners',
       title: '1. Socios Clave',
-      icon: <LinkIcon className="w-6 h-6" />,
+      icon: LinkIcon,
       content: [
         'Unity (motor de desarrollo)',
         'Blender (modelado 3D)',
@@ -33,7 +41,7 @@ const BusinessModelPage: React.FC = () => {
     {
       id: 'activities',
       title: '2. Actividades Clave',
-      icon: <ClipboardList className="w-6 h-6" />,
+      icon: ClipboardList,
       content: [
         'Desarrollo del videojuego en Unity',
         'Implementación del Sistema Basado en Reglas (SBR)',
@@ -49,7 +57,7 @@ const BusinessModelPage: React.FC = () => {
     {
       id: 'resources',
       title: '3. Recursos Clave',
-      icon: <Settings className="w-6 h-6" />,
+      icon: Settings,
       content: [
         'Software: Unity, Blender, Hyper3D, LMMS',
         'Modelos 3D, texturas y assets gratuitos',
@@ -63,7 +71,7 @@ const BusinessModelPage: React.FC = () => {
     {
       id: 'value',
       title: '4. Propuesta de Valor',
-      icon: <Gift className="w-6 h-6" />,
+      icon: Gift,
       content: [
         'Videojuego endless runner 3D inspirado en la leyenda ecuatoriana El Pacto de Cantuña.',
         'Combina cultura indígena + mitología + gameplay moderno.',
@@ -76,7 +84,7 @@ const BusinessModelPage: React.FC = () => {
     {
       id: 'relationships',
       title: '5. Relación con Clientes',
-      icon: <Heart className="w-6 h-6" />,
+      icon: Heart,
       content: [
         'Experiencia accesible e intuitiva.',
         'Tutorial integrado.',
@@ -88,7 +96,7 @@ const BusinessModelPage: React.FC = () => {
     {
       id: 'segments',
       title: '6. Segmentos de Clientes',
-      icon: <Users className="w-6 h-6" />,
+      icon: Users,
       content: [
         'Gamers casuales de juegos tipo runner.',
         'Jóvenes interesados en videojuegos 3D.',
@@ -100,7 +108,7 @@ const BusinessModelPage: React.FC = () => {
     {
       id: 'channels',
       title: '7. Canales',
-      icon: <MessageCircle className="w-6 h-6" />,
+      icon: MessageCircle,
       content: [
         'Plataformas digitales futuras (Itch.io, WebGL, Play Store)',
         'Redes sociales del estudio',
@@ -112,7 +120,7 @@ const BusinessModelPage: React.FC = () => {
     {
       id: 'costs',
       title: '8. Estructura de Costes',
-      icon: <Tag className="w-6 h-6" />,
+      icon: Tag,
       content: [
         'Total gastado: $0 (trabajo con presupuesto cero)',
         'Uso de herramientas totalmente gratuitas',
@@ -123,7 +131,7 @@ const BusinessModelPage: React.FC = () => {
     {
       id: 'revenue',
       title: '9. Fuentes de Ingresos',
-      icon: <Banknote className="w-6 h-6" />,
+      icon: Banknote,
       content: [
         'Proyecto académico sin ingresos actuales',
         'Posibles ingresos futuros:',
@@ -178,7 +186,7 @@ const BusinessModelPage: React.FC = () => {
                 <div className="bg-black/60 backdrop-blur-sm border border-gray-800 p-6 rounded-xl hover:border-gold transition-all duration-300 transform hover:-translate-y-2 shadow-2xl group">
                   <div className="flex items-center mb-4 border-b border-gray-700 pb-2">
                     <div className="p-2 bg-lava-red/20 rounded-lg mr-3 group-hover:bg-gold/20 transition-colors">
-                      {React.cloneElement(section.icon as React.ReactElement, { className: "w-6 h-6 text-lava-red group-hover:text-gold transition-colors" })}
+                      <section.icon className="w-6 h-6 text-lava-red group-hover:text-gold transition-colors" />
                     </div>
                     <h3 className="text-xl font-bold-gaming text-white group-hover:text-gold transition-colors">
                       {section.title}
@@ -205,7 +213,6 @@ const BusinessModelPage: React.FC = () => {
             </div>
           ))}
         </div>
-
 
       </div>
     </div>
