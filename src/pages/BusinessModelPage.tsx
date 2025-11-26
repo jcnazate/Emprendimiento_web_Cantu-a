@@ -9,9 +9,9 @@ import {
   MessageCircle,
   Banknote,
   Tag,
-  Flame,
-  LucideIcon
+  Flame
 } from 'lucide-react';
+import type { LucideIcon } from 'lucide-react';
 import cantunaBg from '../img/Cantuña.jpg';
 
 interface Section {
